@@ -27,7 +27,7 @@ public class SeatController : MonoBehaviour
 
 	void OnDestroy()
 	{
-
+		MagnetSensor.OnCardboardTrigger -= new MagnetSensor.CardboardTrigger(OnTrigger);
 	}
 	// Update is called once per frame
 	void Update () 

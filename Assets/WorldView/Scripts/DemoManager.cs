@@ -7,18 +7,24 @@ public class DemoManager: MonoBehaviour
 	
 	public GameObject[] DemoSteps;
 	public GameObject	shipObject;
+	public GameObject 	camera;
+	public GameObject   truck;	
 	public int 			DemoStepCount = 0;
+
 
 	private bool 		triggered = false;
 	private int 		lastDemoCount;
+	
 	void Awake()
 	{
 		Instance = this;
+		Input.compass.enabled = true;
 		MagnetSensor.OnCardboardTrigger += new MagnetSensor.CardboardTrigger(OnTrigger);
 	}
 
 	void OnDestroy()
 	{
+		Input.compass.enabled = false;
 		MagnetSensor.OnCardboardTrigger -= new MagnetSensor.CardboardTrigger(OnTrigger);
 	}
 	// Update is called once per frame
@@ -30,9 +36,13 @@ public class DemoManager: MonoBehaviour
 			if(DemoStepCount == 0)
 			{
 				DemoStepCount = 1;
+				camera.transform.parent = truck.transform;
 			}
 		}
-				
+		
+		if(Input.touchCount > 0)
+			Application.Quit();
+					
 		if(lastDemoCount != DemoStepCount)
 		{
 			DemoSteps[lastDemoCount].SetActive(false);
@@ -44,7 +54,6 @@ public class DemoManager: MonoBehaviour
 				 shipObject.transform.parent = DemoSteps[lastDemoCount].transform;
 			}
 		}
-	
 	}
 	
 	void OnTrigger()

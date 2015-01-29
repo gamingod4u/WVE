@@ -1,4 +1,4 @@
-﻿﻿using UnityEngine;
+﻿using UnityEngine;
 using System.Collections.Generic;
 
 public class MagnetSensor : MonoBehaviour
@@ -68,8 +68,7 @@ public class MagnetSensor : MonoBehaviour
 		if(min1 < T1 && max2 > T2)
 		{
 			_sensorData.Clear();
-			if(OnCardboardTrigger != null)
-				OnCardboardTrigger();
+			OnCardboardTrigger();
 		}
 	}
 	
@@ -79,6 +78,7 @@ public class MagnetSensor : MonoBehaviour
 		{
 			Vector3 point = _sensorData[start + i];
 			Vector3 o = new Vector3(point.x - baseline.x, point.y - baseline.y, point.z - baseline.z);
+			Debug.Log(o.magnitude);
 			_offsets[i] = o.magnitude;
 		}
 		
