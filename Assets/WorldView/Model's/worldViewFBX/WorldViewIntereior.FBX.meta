@@ -1,0 +1,142 @@
+fileFormatVersion: 2
+guid: 0a4e4903bc778954a84edd8e9a64f418
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: bathroom_wall
+    100002: Chair_001
+    100004: Chair_002
+    100006: Chair_003
+    100008: Chair_004
+    100010: Chair_005
+    100012: Chair_006
+    100014: Chair_007
+    100016: Chair_008
+    100018: floor
+    100020: Inner_hull
+    100022: Tabeltop
+    100024: window_low1_01
+    100026: window_low1_02
+    100028: window_low1_03
+    100030: window_low1_04
+    100032: //RootNode
+    400000: bathroom_wall
+    400002: Chair_001
+    400004: Chair_002
+    400006: Chair_003
+    400008: Chair_004
+    400010: Chair_005
+    400012: Chair_006
+    400014: Chair_007
+    400016: Chair_008
+    400018: floor
+    400020: Inner_hull
+    400022: Tabeltop
+    400024: window_low1_01
+    400026: window_low1_02
+    400028: window_low1_03
+    400030: window_low1_04
+    400032: //RootNode
+    2300000: bathroom_wall
+    2300002: Chair_001
+    2300004: Chair_002
+    2300006: Chair_003
+    2300008: Chair_004
+    2300010: Chair_005
+    2300012: Chair_006
+    2300014: Chair_007
+    2300016: Chair_008
+    2300018: floor
+    2300020: Inner_hull
+    2300022: Tabeltop
+    2300024: window_low1_01
+    2300026: window_low1_02
+    2300028: window_low1_03
+    2300030: window_low1_04
+    3300000: bathroom_wall
+    3300002: Chair_001
+    3300004: Chair_002
+    3300006: Chair_003
+    3300008: Chair_004
+    3300010: Chair_005
+    3300012: Chair_006
+    3300014: Chair_007
+    3300016: Chair_008
+    3300018: floor
+    3300020: Inner_hull
+    3300022: Tabeltop
+    3300024: window_low1_01
+    3300026: window_low1_02
+    3300028: window_low1_03
+    3300030: window_low1_04
+    4300000: floor
+    4300002: window_low1_01
+    4300004: window_low1_02
+    4300006: window_low1_03
+    4300008: window_low1_04
+    4300010: bathroom_wall
+    4300012: Tabeltop
+    4300014: Inner_hull
+    4300016: Chair_001
+    4300018: Chair_002
+    4300020: Chair_003
+    4300022: Chair_004
+    4300024: Chair_005
+    4300026: Chair_006
+    4300028: Chair_007
+    4300030: Chair_008
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

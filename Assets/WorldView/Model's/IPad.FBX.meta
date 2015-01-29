@@ -1,0 +1,145 @@
+fileFormatVersion: 2
+guid: 8b0ab9369a3b310419612933eaf24b07
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: _____
+    100002: _____1
+    100004: __________
+    100006: Back
+    100008: Buttons
+    100010: CHANGEABLE
+    100012: Cube
+    100014: Edge
+    100016: Front
+    100018: Home_Butto
+    100020: //RootNode
+    100022: iPad
+    100024: iPad1
+    100026: iPad2
+    100028: On_Off_Swi
+    100030: Orientatio
+    100032: Plane
+    100034: Screen
+    100036: Speakers
+    100038: Speakers_1
+    100040: TooBig0
+    100042: TooBig1
+    100044: Volume_but
+    400000: _____
+    400002: _____1
+    400004: __________
+    400006: Back
+    400008: Buttons
+    400010: CHANGEABLE
+    400012: Cube
+    400014: Edge
+    400016: Front
+    400018: Home_Butto
+    400020: //RootNode
+    400022: iPad
+    400024: iPad1
+    400026: iPad2
+    400028: On_Off_Swi
+    400030: Orientatio
+    400032: Plane
+    400034: Screen
+    400036: Speakers
+    400038: Speakers_1
+    400040: TooBig0
+    400042: TooBig1
+    400044: Volume_but
+    2300000: Back
+    2300002: CHANGEABLE
+    2300004: Cube
+    2300006: Edge
+    2300008: Front
+    2300010: Home_Butto
+    2300012: On_Off_Swi
+    2300014: Plane
+    2300016: Speakers
+    2300018: Speakers_1
+    2300020: TooBig0
+    2300022: TooBig1
+    2300024: Volume_but
+    3300000: Back
+    3300002: CHANGEABLE
+    3300004: Cube
+    3300006: Edge
+    3300008: Front
+    3300010: Home_Butto
+    3300012: On_Off_Swi
+    3300014: Plane
+    3300016: Speakers
+    3300018: Speakers_1
+    3300020: TooBig0
+    3300022: TooBig1
+    3300024: Volume_but
+    4300000: CHANGEABLE
+    4300002: Edge
+    4300004: Front
+    4300006: Back
+    4300008: TooBig0
+    4300010: TooBig1
+    4300012: Home_Butto
+    4300014: Speakers_1
+    4300016: Speakers
+    4300018: Plane
+    4300020: Cube
+    4300022: On_Off_Swi
+    4300024: Volume_but
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
