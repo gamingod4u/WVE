@@ -9,7 +9,7 @@ public class Scene1Controller : MonoBehaviour
 	public static Scene1Controller Instance;
 	
 	
-	public GameObject 	truckObject;
+
 	public GameObject 	cameraObject;
 	public GameObject   shipObject;
 	public GameObject 	doorHinge;
@@ -17,7 +17,7 @@ public class Scene1Controller : MonoBehaviour
 	public int 			currentSceneCount = 0;
 	
 	// private variables
-	private TruckController 	truckController;
+
 	private WalkingController 	walkingController;
 	private ShipController   	shipController;
 	private Vector3	  			openDoor = new Vector3(0,90f,0);
@@ -31,8 +31,6 @@ public class Scene1Controller : MonoBehaviour
 	void Awake(){Instance = this;}
 	void Start () 
 	{		
-		truckController = truckObject.GetComponent<TruckController>();
-		truckController.enabled = true;
 		walkingController = cameraObject.GetComponent<WalkingController>();
 		shipController = shipObject.GetComponent<ShipController>();
 		lastSceneCount = currentSceneCount;
@@ -76,8 +74,7 @@ public class Scene1Controller : MonoBehaviour
 				case 0:{break;}
 				case 1:
 				{
-					truckController.enabled = false;
-					cameraObject.transform.parent = null;
+
 					doorHinge.transform.localEulerAngles = Vector3.Slerp(closeDoor, openDoor, 2.0f);
 					walkingController.enabled = true;
 					

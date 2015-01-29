@@ -6,9 +6,10 @@ public class DemoManager: MonoBehaviour
 	public static DemoManager Instance;
 	
 	public GameObject[] DemoSteps;
+	public GameObject[] starParticles;
 	public GameObject	shipObject;
 	public GameObject 	camera;
-	public GameObject   truck;	
+	public GameObject   startingPosition;	
 	public int 			DemoStepCount = 0;
 
 
@@ -36,7 +37,8 @@ public class DemoManager: MonoBehaviour
 			if(DemoStepCount == 0)
 			{
 				DemoStepCount = 1;
-				camera.transform.parent = truck.transform;
+				camera.transform.position = startingPosition.transform.position;
+			
 			}
 		}
 		
@@ -45,14 +47,24 @@ public class DemoManager: MonoBehaviour
 					
 		if(lastDemoCount != DemoStepCount)
 		{
+
 			DemoSteps[lastDemoCount].SetActive(false);
 			lastDemoCount = DemoStepCount;
 			DemoSteps[lastDemoCount].SetActive(true);
-			
-			if(lastDemoCount == 3 || lastDemoCount == 5)
+			if(DemoStepCount%2 == 0)
 			{
-				 shipObject.transform.parent = DemoSteps[lastDemoCount].transform;
+				camera.transform.parent = null;
+				starParticles[0].SetActive(true);
+				starParticles[1].SetActive(true);
 			}
+			else
+			{
+				camera.transform.parent = shipObject.transform;
+				starParticles[0].SetActive(false);
+				starParticles[1].SetActive(false);
+			}
+
+
 		}
 	}
 	
