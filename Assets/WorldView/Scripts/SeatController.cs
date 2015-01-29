@@ -9,11 +9,13 @@ public class SeatController : MonoBehaviour
 	public  bool 			seatted = false;
 	
 	private float 			seatChangeCooldown = 1.0f;
+	private bool 			triggered = false;
 	private bool 			seatChange = false;
 	private int 			seatNum = 0;
 	// Use this for initialization
 	void Awake () 
 	{
+		MagnetSensor.OnCardboardTrigger += new MagnetSensor.CardboardTrigger(OnTrigger);
 		seatRotation = new Vector3[seats.Length];
 		seatRotation[0] = new Vector3(0, 80,0);
 		seatRotation[1] = new Vector3(0,100,0);
@@ -22,13 +24,17 @@ public class SeatController : MonoBehaviour
 		seatRotation[4] = new Vector3(0,160,0);
 		seatRotation[5] = new Vector3(0,200,0);
 	}
-	
+
+	void OnDestroy()
+	{
+
+	}
 	// Update is called once per frame
 	void Update () 
 	{
 		if(seatted && !seatChange)
 		{
-			if(Input.GetMouseButtonDown(0))
+			if(Input.GetMouseButtonDown(0) || triggered)
 			{
 				seatChange = true;
 				seatNum++;
@@ -46,14 +52,20 @@ public class SeatController : MonoBehaviour
 		{
 			seatChangeCooldown = 1;
 			seatChange = false;
+			triggered = false;
 		}
 	}
-	
+
 	void ClampSeatNum()
 	{
 		if(seatNum > 5)
 			seatNum = 0;
 		if(seatNum < 0)
 			seatNum = 5;
+	}
+
+	void OnTrigger()
+	{
+		triggered = true;
 	}
 }

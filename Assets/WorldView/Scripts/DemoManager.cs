@@ -8,17 +8,25 @@ public class DemoManager: MonoBehaviour
 	public GameObject[] DemoSteps;
 	public GameObject	shipObject;
 	public int 			DemoStepCount = 0;
-	
+
+	private bool 		triggered = false;
 	private int 		lastDemoCount;
 	void Awake()
 	{
 		Instance = this;
-	}	
+		MagnetSensor.OnCardboardTrigger += new MagnetSensor.CardboardTrigger(OnTrigger);
+	}
+
+	void OnDestroy()
+	{
+		MagnetSensor.OnCardboardTrigger -= new MagnetSensor.CardboardTrigger(OnTrigger);
+	}
 	// Update is called once per frame
 	void Update () 
 	{
-		if(Input.GetMouseButtonDown(0))
+		if(Input.GetMouseButtonDown(0) || triggered)
 		{
+			triggered = false;
 			if(DemoStepCount == 0)
 			{
 				DemoStepCount = 1;
@@ -39,7 +47,11 @@ public class DemoManager: MonoBehaviour
 	
 	}
 	
-	
+	void OnTrigger()
+	{
+		triggered = true;
+	}
+
 	public void IncrementCounter()
 	{
 		DemoStepCount++;
