@@ -19,13 +19,11 @@ public class DemoManager: MonoBehaviour
 	void Awake()
 	{
 		Instance = this;
-		Input.compass.enabled = true;
 		MagnetSensor.OnCardboardTrigger += new MagnetSensor.CardboardTrigger(OnTrigger);
 	}
 
 	void OnDestroy()
 	{
-		Input.compass.enabled = false;
 		MagnetSensor.OnCardboardTrigger -= new MagnetSensor.CardboardTrigger(OnTrigger);
 	}
 	// Update is called once per frame
@@ -51,14 +49,17 @@ public class DemoManager: MonoBehaviour
 			DemoSteps[lastDemoCount].SetActive(false);
 			lastDemoCount = DemoStepCount;
 			DemoSteps[lastDemoCount].SetActive(true);
+			
 			if(DemoStepCount%2 == 0)
 			{
 				camera.transform.parent = null;
+				shipObject.SetActive(false);
 				starParticles[0].SetActive(true);
 				starParticles[1].SetActive(true);
 			}
 			else
 			{
+				shipObject.SetActive(true);
 				camera.transform.parent = shipObject.transform;
 				starParticles[0].SetActive(false);
 				starParticles[1].SetActive(false);

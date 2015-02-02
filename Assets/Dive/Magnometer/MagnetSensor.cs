@@ -9,11 +9,14 @@ public class MagnetSensor : MonoBehaviour
 	private const int WINDOW_SIZE = 40;
 	private const int NUM_SEGMENTS = 2;
 	private const int SEGMENT_SIZE = WINDOW_SIZE / NUM_SEGMENTS;
-	private const int T1 = 30, T2 = 130;
+	private const int T1 = 2, T2 = 5;
 	
+	
+	public GUIText text;
 	private List<Vector3> _sensorData;
 	private float[] _offsets;
-	
+	private float lastMin = 0;
+	private float lastMax = 0;
 	void Awake()
 	{
 		_sensorData = new List<Vector3>(WINDOW_SIZE);
@@ -64,7 +67,16 @@ public class MagnetSensor : MonoBehaviour
 		
 		float min1 = minimums[0];
 		float max2 = maximums[1];
+		/*
+		if(lastMin <= min1 || lastMax <= max2 )
+		{
+			lastMax = max2;
+			lastMin = min1;
+			text.text = min1.ToString() + "    " + max2.ToString();
+		}
+		*/
 		
+				
 		if(min1 < T1 && max2 > T2)
 		{
 			_sensorData.Clear();

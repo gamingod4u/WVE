@@ -13,6 +13,7 @@ public class Scene1Controller : MonoBehaviour
 	public GameObject 	cameraObject;
 	public GameObject   shipObject;
 	public GameObject 	doorHinge;
+	public GameObject   butterfly;
 	public GameObject []doorObjects;
 	public int 			currentSceneCount = 0;
 	
@@ -34,6 +35,7 @@ public class Scene1Controller : MonoBehaviour
 		walkingController = cameraObject.GetComponent<WalkingController>();
 		shipController = shipObject.GetComponent<ShipController>();
 		lastSceneCount = currentSceneCount;
+		StartCoroutine("WaitforWalk", 5.0f);
 	}
 	
 	// Update is called once per frame
@@ -48,6 +50,10 @@ public class Scene1Controller : MonoBehaviour
 		if(shipObject.transform.position.y > 120f)
 		{
 			DemoManager.Instance.IncrementCounter();
+		}
+		else
+		{
+			butterfly.audio.volume -= shipObject.transform.position.y *.0001f;
 		}
 	}
 	
@@ -71,7 +77,7 @@ public class Scene1Controller : MonoBehaviour
 		{
 			switch(currentSceneCount)
 			{
-				case 0:{break;}
+			case 0:{  break;}
 				case 1:
 				{
 
@@ -103,6 +109,14 @@ public class Scene1Controller : MonoBehaviour
 	{
 		yield return new WaitForSeconds(time);
 		shipController.enabled = true;
+	}
+	
+	private IEnumerator WaitforWalk(float time)
+	{
+	Debug.Log("in");
+		yield return new WaitForSeconds(time);
+		Debug.Log("out");
+		IncrementCounter();
 	}
 	#endregion
 }

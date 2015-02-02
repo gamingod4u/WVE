@@ -11,6 +11,7 @@ public class SeatController : MonoBehaviour
 	private float 			seatChangeCooldown = 1.0f;
 	private bool 			triggered = false;
 	private bool 			seatChange = false;
+	private bool 			firstSeat = true;
 	private int 			seatNum = 0;
 	// Use this for initialization
 	void Awake () 
@@ -53,6 +54,12 @@ public class SeatController : MonoBehaviour
 			seatChangeCooldown = 1;
 			seatChange = false;
 			triggered = false;
+		}
+		
+		if(seatted && firstSeat)
+		{
+			camera.transform.eulerAngles = seatRotation[seatNum];
+			firstSeat = false;
 		}
 	}
 

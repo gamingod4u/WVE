@@ -24,7 +24,6 @@ public class WalkingController : MonoBehaviour
 	{
 		seatController = capsule.GetComponent<SeatController>();
 		nextWaypoint = walkingWaypoints[targetedWaypoint].transform.position;
-		walkingWaypoints[1].audio.enabled = true;
 		audio.enabled = true;
 	}
 	
@@ -40,7 +39,6 @@ public class WalkingController : MonoBehaviour
 			seatController.seatted = true;
 			exterior.SetActive(false);
 			Scene1Controller.Instance.IncrementCounter();
-			walkingWaypoints[1].audio.enabled = false;
 			audio.enabled = false;
 			enabled = false;
 		}
